@@ -1,0 +1,49 @@
+package classes;
+/**
+ * @apiNote Класс для специального клиента дополнительное поле id
+ */
+public class SpecialClient extends Actor{
+    private int idVip;
+    public int getIdVip() {
+        return idVip;
+    }
+    public void setIdVip(int idVip) {
+        this.idVip = idVip;
+    }
+    public SpecialClient(String name, int idVip) {
+        super(name);
+        this.idVip = idVip;
+    }
+    public boolean isMakeOrder(){
+        return super.isMakeOrder;
+
+    }
+    public boolean isTakeOrder(){
+        return super.isTakeOrder;
+
+    }
+    public void setMakeOrder(boolean isCreated){
+        super.isMakeOrder=isCreated;
+
+    }
+    public void setTakeOrder(boolean isCreated){
+        super.isTakeOrder=isCreated;
+    }
+    public Actor getActor(){
+        return this;
+    }
+    @Override
+    String getName() {
+        return super.name;
+    }
+    @Override
+    void setName(String name) {
+       super.name=name;
+    }
+    @Override
+    public boolean flagNamePromo() {
+        return false;
+    }
+
+    
+}
