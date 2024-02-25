@@ -89,12 +89,14 @@ System.out.println("клиент "+actor.getActor().getName() + " сделал �
 //     // TODO Auto-generated method stub
 //     throw new UnsupportedOperationException("Unimplemented method 'returnOrder'");
 // }
-
+/**
+ * @apiNote МЕтод который в идеале должен делать возврат через флаг flagNamePromo но что то пошло не так
+ */
 @Override
 public void returnOrder() {
     int clientAction=0;
     for (iActorBehaviour actor:queue){
-        if (clientAction<=PromotionalClient.getNubersOfParticipantPromo()) {
+        if (clientAction<=PromotionalClient.getNubersOfParticipantPromo()) {   // TODO доделать реализацию возврата
             if (actor.flagNamePromo()) {
                 actor.setTakeOrder(true);
                 System.out.println("клиент "+actor.getActor().getName() + " получил свой заказ ");
